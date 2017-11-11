@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="545722" started-at="2017-11-11T14:17:35Z" finished-at="2017-11-11T14:26:41Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="545722" started-at="2017-11-11T14:17:35Z" finished-at="2017-11-11T14:26:41Z">
+      <class name="com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits">
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits@edf4efb]" name="Siteup" is-config="true" duration-ms="16137" started-at="2017-11-11T19:47:35Z" finished-at="2017-11-11T19:47:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test1()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits@edf4efb]" name="Test1" duration-ms="22259" started-at="2017-11-11T19:47:52Z" finished-at="2017-11-11T19:48:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits@edf4efb]" name="teardown" is-config="true" duration-ms="720" started-at="2017-11-11T19:48:14Z" finished-at="2017-11-11T19:48:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits@edf4efb]" name="Siteup" is-config="true" duration-ms="11489" started-at="2017-11-11T19:48:14Z" finished-at="2017-11-11T19:48:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test2()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits@edf4efb]" name="Test2" duration-ms="18263" started-at="2017-11-11T19:48:26Z" finished-at="2017-11-11T19:48:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test2 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits@edf4efb]" name="teardown" is-config="true" duration-ms="667" started-at="2017-11-11T19:48:44Z" finished-at="2017-11-11T19:48:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits@edf4efb]" name="Siteup" is-config="true" duration-ms="8443" started-at="2017-11-11T19:48:45Z" finished-at="2017-11-11T19:48:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test3()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits@edf4efb]" name="Test3" duration-ms="17535" started-at="2017-11-11T19:48:53Z" finished-at="2017-11-11T19:49:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test3 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits@edf4efb]" name="teardown" is-config="true" duration-ms="701" started-at="2017-11-11T19:49:11Z" finished-at="2017-11-11T19:49:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits@edf4efb]" name="Siteup" is-config="true" duration-ms="9003" started-at="2017-11-11T19:49:12Z" finished-at="2017-11-11T19:49:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test4()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits@edf4efb]" name="Test4" duration-ms="21436" started-at="2017-11-11T19:49:21Z" finished-at="2017-11-11T19:49:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test4 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits@edf4efb]" name="teardown" is-config="true" duration-ms="674" started-at="2017-11-11T19:49:42Z" finished-at="2017-11-11T19:49:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.SchoolMgmt.schooltest.TestCasesForLoginFeeUnits -->
+      <class name="com.SchoolMgmt.schooltest.TestCasesForLoginGeneralMaintain">
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginGeneralMaintain@2f7a2457]" name="Siteup" is-config="true" duration-ms="11306" started-at="2017-11-11T19:49:43Z" finished-at="2017-11-11T19:49:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test1()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginGeneralMaintain@2f7a2457]" name="Test1" duration-ms="30518" started-at="2017-11-11T19:49:54Z" finished-at="2017-11-11T19:50:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginGeneralMaintain@2f7a2457]" name="teardown" is-config="true" duration-ms="1286" started-at="2017-11-11T19:50:25Z" finished-at="2017-11-11T19:50:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.SchoolMgmt.schooltest.TestCasesForLoginGeneralMaintain -->
+      <class name="com.SchoolMgmt.schooltest.TestCasesForLoginMappings">
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Siteup" is-config="true" duration-ms="15364" started-at="2017-11-11T19:50:26Z" finished-at="2017-11-11T19:50:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test1()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Test1" duration-ms="21500" started-at="2017-11-11T19:50:41Z" finished-at="2017-11-11T19:51:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="teardown" is-config="true" duration-ms="817" started-at="2017-11-11T19:51:03Z" finished-at="2017-11-11T19:51:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Siteup" is-config="true" duration-ms="18910" started-at="2017-11-11T19:51:03Z" finished-at="2017-11-11T19:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test2()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Test2" duration-ms="19843" started-at="2017-11-11T19:51:22Z" finished-at="2017-11-11T19:51:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test2 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="teardown" is-config="true" duration-ms="768" started-at="2017-11-11T19:51:42Z" finished-at="2017-11-11T19:51:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Siteup" is-config="true" duration-ms="17559" started-at="2017-11-11T19:51:43Z" finished-at="2017-11-11T19:52:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test3()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Test3" duration-ms="19379" started-at="2017-11-11T19:52:01Z" finished-at="2017-11-11T19:52:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test3 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="teardown" is-config="true" duration-ms="699" started-at="2017-11-11T19:52:20Z" finished-at="2017-11-11T19:52:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Siteup" is-config="true" duration-ms="9515" started-at="2017-11-11T19:52:21Z" finished-at="2017-11-11T19:52:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test4()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Test4" duration-ms="22043" started-at="2017-11-11T19:52:30Z" finished-at="2017-11-11T19:52:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test4 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="teardown" is-config="true" duration-ms="779" started-at="2017-11-11T19:52:52Z" finished-at="2017-11-11T19:52:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Siteup" is-config="true" duration-ms="11449" started-at="2017-11-11T19:52:53Z" finished-at="2017-11-11T19:53:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test5()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Test5" duration-ms="22575" started-at="2017-11-11T19:53:04Z" finished-at="2017-11-11T19:53:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test5 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="teardown" is-config="true" duration-ms="1031" started-at="2017-11-11T19:53:27Z" finished-at="2017-11-11T19:53:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Siteup" is-config="true" duration-ms="15307" started-at="2017-11-11T19:53:28Z" finished-at="2017-11-11T19:53:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test6()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Test6" duration-ms="31885" started-at="2017-11-11T19:53:43Z" finished-at="2017-11-11T19:54:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test6 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="teardown" is-config="true" duration-ms="681" started-at="2017-11-11T19:54:15Z" finished-at="2017-11-11T19:54:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Siteup" is-config="true" duration-ms="11768" started-at="2017-11-11T19:54:16Z" finished-at="2017-11-11T19:54:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test7()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Test7" duration-ms="98892" started-at="2017-11-11T19:54:28Z" finished-at="2017-11-11T19:56:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test7 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="teardown" is-config="true" duration-ms="674" started-at="2017-11-11T19:56:07Z" finished-at="2017-11-11T19:56:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Siteup" is-config="true" duration-ms="11907" started-at="2017-11-11T19:56:07Z" finished-at="2017-11-11T19:56:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test8()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="Test8" duration-ms="21227" started-at="2017-11-11T19:56:19Z" finished-at="2017-11-11T19:56:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test8 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginMappings@566776ad]" name="teardown" is-config="true" duration-ms="654" started-at="2017-11-11T19:56:40Z" finished-at="2017-11-11T19:56:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.SchoolMgmt.schooltest.TestCasesForLoginMappings -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

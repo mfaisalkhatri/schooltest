@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="93247" started-at="2017-11-11T11:58:54Z" finished-at="2017-11-11T12:00:27Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="93247" started-at="2017-11-11T11:58:54Z" finished-at="2017-11-11T12:00:27Z">
+      <class name="com.SchoolMgmt.schooltest.TestCasesForLoginGeneralMaintain">
+        <test-method status="PASS" signature="Siteup()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginGeneralMaintain@618ad2aa]" name="Siteup" is-config="true" duration-ms="11964" started-at="2017-11-11T17:28:54Z" finished-at="2017-11-11T17:29:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Siteup -->
+        <test-method status="PASS" signature="Test1()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginGeneralMaintain@618ad2aa]" name="Test1" duration-ms="80419" started-at="2017-11-11T17:29:06Z" finished-at="2017-11-11T17:30:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.SchoolMgmt.schooltest.TestCasesForLoginGeneralMaintain@618ad2aa]" name="teardown" is-config="true" duration-ms="730" started-at="2017-11-11T17:30:27Z" finished-at="2017-11-11T17:30:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.SchoolMgmt.schooltest.TestCasesForLoginGeneralMaintain -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

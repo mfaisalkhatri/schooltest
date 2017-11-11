@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <test name="Test(failed)" parallel="methods">
+    <classes>
+      <class name="com.SchoolMgmt.schooltest.TestCases">
+        <methods>
+          <include name="teardown"/>
+          <include name="Test1"/>
+          <include name="Siteup"/>
+          <include name="Test2"/>
+          <include name="Test3"/>
+        </methods>
+      </class> <!-- com.SchoolMgmt.schooltest.TestCases -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

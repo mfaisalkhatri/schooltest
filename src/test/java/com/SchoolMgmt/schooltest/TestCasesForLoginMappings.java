@@ -2,7 +2,13 @@ package com.SchoolMgmt.schooltest;
 
 import java.io.IOException;
 
+import static com.SchoolMgmt.utils.Messages.*;
+import static com.SchoolMgmt.utils.ScrShot.*;
 import org.testng.annotations.Test;
+
+import com.SchoolMgmt.schoolPages.BranchPage;
+import com.SchoolMgmt.schoolPages.LoginPage;
+import com.SchoolMgmt.schoolPages.MainPage;
 
 public class TestCasesForLoginMappings extends Setup{
 
@@ -15,76 +21,57 @@ public class TestCasesForLoginMappings extends Setup{
 	public void Test1() throws InterruptedException, IOException 
 	{	
 		String subMenu  = "Student Class Map";
+		testStartMessage("Test 1");
 		
-		System.out.println("Starting Test 1");
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrName,pass,accRights);
 
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
 		
 		MainPage mpg = new MainPage(driver);
-	
 		mpg.mainPageAfterLogin(mainMenu,subMenu);
-		waitfs.WaitforSometime(2000);
-	
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
+		captureScreen(driver);
 		
-		System.out.println("Test 1 Complete.");
+		testEndMessage("Test 1");
 	}
 	
 	@Test
 	public void Test2() throws InterruptedException, IOException 
 	{
 		String subMenu = "Teacher Subject Map";
+		testStartMessage("Test 2");
 		
-		System.out.println("Starting Test 2..");
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrName,pass,accRights);
 	
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
 			
 		MainPage mpg = new MainPage(driver);
-	
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
-		waitfs.WaitforSometime(2000);
+		captureScreen(driver);
 		
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
-		
-		System.out.println("Test 2 Complete.");
+		testEndMessage("Test 2");
 	}
 	
 	@Test
 	public void Test3() throws InterruptedException, IOException 
 	{	
 		String subMenu =  "Class Section Map";
-		
-		System.out.println("Starting Test 3...");
+		testStartMessage("Test 3");
 		
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
-		login.loginapp("MFK", "123456", "Admin");
+		login.loginapp(usrName, pass, accRights);
 	
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
 		
 		MainPage mpg = new MainPage(driver);
-	
 		mpg.mainPageAfterLogin(mainMenu,subMenu);
-		waitfs.WaitforSometime(2000);
-	
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
+		captureScreen(driver);
 		
-		System.out.println("Test 3 Complete.");
+		testEndMessage("Test 3");
 	}
 		
 	@Test
@@ -92,25 +79,19 @@ public class TestCasesForLoginMappings extends Setup{
 	{
 		
 		String subMenu = "Teacher Class Section Map";
-		System.out.println("Starting Test 4...");
+		testStartMessage("Test 4");
 		
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrName,pass,accRights);
 	
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
 		
 		MainPage mpg = new MainPage(driver);
-	
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
-		waitfs.WaitforSometime(2000);
+		captureScreen(driver);
 		
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
-		
-		System.out.println("Test 4 Complete.");
+		testEndMessage("Test 4");
 	}
 		
 	@Test
@@ -118,76 +99,57 @@ public class TestCasesForLoginMappings extends Setup{
 	{
 		
 		String subMenu = "Teacher Subject Class Map";
-		System.out.println("Starting Test 5...");
+		testStartMessage("Test 5");
 		
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrName,pass,accRights);
 	
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
 		
 		MainPage mpg = new MainPage(driver);
-	
 		mpg.mainPageAfterLogin(mainMenu,subMenu);
-		waitfs.WaitforSometime(2000);		
-
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
+		captureScreen(driver);
 		
-		System.out.println("Test 5 Complete.");
+		testEndMessage("Test 5");
 	}
 		
 	@Test
 	public void Test6() throws InterruptedException, IOException 
 	{
 		String subMenu = "Lecture Time Map";
-		
-		System.out.println("Starting Test 6...");
+		testStartMessage("Test 6");
 		
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrName, pass, accRights);
 		
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
 		
 		MainPage mpg = new MainPage(driver);
-	
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
-		waitfs.WaitforSometime(2000);	
+		captureScreen(driver);
 		
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
-		
-		System.out.println("Test 6 Complete.");
+		testEndMessage("Test 6");
 	}
 		
 	@Test
 	public void Test7() throws InterruptedException, IOException 
 	{
 		String subMenu = "Time Table";
-		System.out.println("Starting Test 7...");
+		testStartMessage("Test 7");
 		
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrName,pass,accRights);
 	
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
 		
 		MainPage mpg = new MainPage(driver);
-	
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
-		waitfs.WaitforSometime(2000);
-	
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
+		captureScreen(driver);
 		
-		System.out.println("Test 7 Complete.");
+		testEndMessage("Test 7");
 	}
 		
 	
@@ -195,25 +157,19 @@ public class TestCasesForLoginMappings extends Setup{
 	public void Test8() throws InterruptedException, IOException 
 	{	
 		String subMenu = "Subject Syllabus";
-		System.out.println("Starting Test 8...");
+		testStartMessage("Test 8");
 		
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrName,pass,accRights);
 	
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
 		
 		MainPage mpg = new MainPage(driver);
-	
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
-		waitfs.WaitforSometime(2000);
-	
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
+		captureScreen(driver);
 		
-		System.out.println("Test 7 Complete.");
+		testEndMessage("Test 8");
 	}
 
 }

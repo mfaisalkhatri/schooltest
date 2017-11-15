@@ -7,7 +7,7 @@
         <methods>
           <include name="teardown"/>
           <include name="Siteup"/>
-          <include name="Test3"/>
+          <include name="Test3" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.SchoolMgmt.schooltest.TestCasesForLoginGeneralMaintain -->
     </classes>

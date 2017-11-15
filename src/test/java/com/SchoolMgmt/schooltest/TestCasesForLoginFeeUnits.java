@@ -1,7 +1,12 @@
 package com.SchoolMgmt.schooltest;
 
+import static com.SchoolMgmt.utils.Messages.*;
+import static com.SchoolMgmt.utils.ScrShot.*;
 import java.io.IOException;
 import org.testng.annotations.Test;
+import com.SchoolMgmt.schoolPages.BranchPage;
+import com.SchoolMgmt.schoolPages.LoginPage;
+import com.SchoolMgmt.schoolPages.MainPage;
 
 public class TestCasesForLoginFeeUnits extends Setup{
 
@@ -12,29 +17,23 @@ public class TestCasesForLoginFeeUnits extends Setup{
 	final String mainMenu  = "Fee Units"; 
 
 	@Test
-	public void Test1() throws InterruptedException, IOException 
+	public void Test1() throws IOException 
 	{
 
 		String subMenu  = "Fee Head";
+		testStartMessage("Test 1");
 		
-		System.out.println("Starting Test 1");
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrname,pass,accRights);
 		
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
 		
 		MainPage mpg = new MainPage(driver);
-
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
-		waitfs.WaitforSometime(2000);
+		captureScreen(driver);
 		
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
-		
-		System.out.println("Test 1 Complete.");
+		testEndMessage("Test 1");
 	}
 	
 
@@ -42,26 +41,19 @@ public class TestCasesForLoginFeeUnits extends Setup{
 	public void Test2() throws InterruptedException, IOException 
 	{
 		String subMenu  = "Fee Template";
-		
-		System.out.println("Starting Test 2");
+		testStartMessage("Test 2");
 		
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrname,pass,accRights);
 		
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
 		
 		MainPage mpg = new MainPage(driver);
-
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
-		waitfs.WaitforSometime(2000);
-	
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
+		captureScreen(driver);
 		
-		System.out.println("Test 2 Complete.");
+		testEndMessage("Test 2");
 		
 	}
 	
@@ -71,25 +63,19 @@ public class TestCasesForLoginFeeUnits extends Setup{
 	
 		String subMenu  = "Fee Class Template";
 		
-		System.out.println("Starting Test 3");
+		testStartMessage("Test 3");
 		
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrname,pass,accRights);
 	
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
 		
 		MainPage mpg = new MainPage(driver);
-
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
-		waitfs.WaitforSometime(2000);
+		captureScreen(driver);
 		
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
-		
-		System.out.println("Test 3 Complete.");
+		testEndMessage("Test 3");
 		
 	}
 
@@ -99,25 +85,20 @@ public class TestCasesForLoginFeeUnits extends Setup{
 	
 		String subMenu   = "Fee Collection";
 		
-		System.out.println("Starting Test 4");
+		testStartMessage("Test 4");
 		
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrname,pass,accRights);
 	
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
 	
 		MainPage mpg = new MainPage(driver);
-
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
-		waitfs.WaitforSometime(2000);
+	
+		captureScreen(driver);
 		
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
-		
-		System.out.println("Test 4 Complete.");
+		testEndMessage("Test 4");
 		
 	}	
 	

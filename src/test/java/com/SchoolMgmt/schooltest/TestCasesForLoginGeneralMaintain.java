@@ -2,8 +2,16 @@ package com.SchoolMgmt.schooltest;
 
 import java.io.IOException;
 
+import static com.SchoolMgmt.utils.Messages.*;
+import static com.SchoolMgmt.utils.ScrShot.*;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import com.SchoolMgmt.schoolPages.BranchPage;
+import com.SchoolMgmt.schoolPages.LoginPage;
+import com.SchoolMgmt.schoolPages.MainPage;
+import com.SchoolMgmt.schoolPages.TeacherPage;
+import com.SchoolMgmt.utils.ExcelDataConfig;
 
 public class TestCasesForLoginGeneralMaintain extends Setup{
 
@@ -12,164 +20,136 @@ public class TestCasesForLoginGeneralMaintain extends Setup{
 	final String accRights = "Admin";
 	final String mainMenu  = "General Maintain";
 	
-	@Test
-	public void Test1() throws InterruptedException, IOException 
+/*	@Test
+	public void Test1() throws IOException 
 	{
 
 		String subMenu  = "School Session";
-		
-		System.out.println("Test 1 Start..");
+		testStartMessage("Test 1");
 		
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrName,pass,accRights);
-		waitfs.WaitforSometime(2000);
-		
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
+		captureScreen(driver);
 
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
-		
-		waitfs.WaitforSometime(2000);
 
 		MainPage mpg = new MainPage(driver);
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
-		waitfs.WaitforSometime(2000);
+		captureScreen(driver);
 		
-		capture.captureScreen();
-		
-		System.out.println("Test 1 Complete!!");
+		testEndMessage("Test 1");
 	}
 
-/*	@Test
+	@Test
 	public void Test2() throws InterruptedException, IOException 
 	{
 	
 		String subMenu   = "Branch";
-		
-		System.out.println("Test 2 Start..");
+		testStartMessage("Test 2");
 		
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrName,pass,accRights);
-		waitfs.WaitforSometime(2000);
-		
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
+		captureScreen(driver);
 
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
-		waitfs.WaitforSometime(2000);
-	
+		
 		MainPage mpg = new MainPage(driver);
-	
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
-		waitfs.WaitforSometime(2000);
+		captureScreen(driver);
 		
-		capture.captureScreen();
-		
-		System.out.println("Test 2 Complete!!");
-	}
+		testEndMessage("Test 2");	
 	
-	@Test
-	public void Test3() throws InterruptedException, IOException 
+	}*/
+	
+	@Test(dataProvider = "personalData")
+	public void Test3(String code, String fName, String mName, String lName, String birthDate, String gender, String mStatus, String contactNo) throws IOException 
 	{	
 		String subMenu   = "Teacher";
-		String code = "Code123";
-		
-		System.out.println("Test 3 Start..");
+		testStartMessage("Test 3");
 		
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrName,pass,accRights);
-		waitfs.WaitforSometime(2000);
-		
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
+		captureScreen(driver);
 
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
-		waitfs.WaitforSometime(2000);
 		
 		MainPage mpg = new MainPage(driver);
-	
 		mpg.mainPageAfterLogin(mainMenu,subMenu);
-		waitfs.WaitforSometime(2000);
-		
-		capture.captureScreen();
+		captureScreen(driver);
 		
 		TeacherPage tPage = new TeacherPage(driver);
 		tPage.teacherElements();
+		tPage.addTeacherRecord(code,fName,mName,lName,birthDate,Boolean.parseBoolean(gender),Boolean.parseBoolean(mStatus),contactNo);
+		captureScreen(driver);
 		
-		
-		tPage.addTeacherRecord(code);
-		capture.captureScreen();
-		
-		System.out.println("Test 3 Complete!!");
+		testEndMessage("Test 3");
 	}
 	
-	@Test
-	public void Test4() throws InterruptedException, IOException 
+	/*@Test
+	public void Test4() throws IOException 
 	{
 		String subMenu   = "Student";
-		
-		System.out.println("Test 4 Start..");
+		testStartMessage("Test 4");
 	
 		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
 		login.loginapp(usrName,pass,accRights);
-		waitfs.WaitforSometime(2000);
-		
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
+		captureScreen(driver);
 
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
-		waitfs.WaitforSometime(2000);
-	
+		
 		MainPage mpg = new MainPage(driver);
-	
-		mpg.mainPageAfterLogin(mainMenu, subMenu);
-		waitfs.WaitforSometime(2000);
+		mpg.mainPageAfterLogin(mainMenu, subMenu);	
+		captureScreen(driver);		
 		
-		capture.captureScreen();		
-		
-		System.out.println("Test 4 Complete!!");
+		testEndMessage("Test 4");
 	}
 	
 	@Test
 	public void Test5() throws InterruptedException, IOException 
 	{
 		String subMenu   = "User";
+		testStartMessage("Test 5");
 		
-		System.out.println("Test 5 Start..");
-		
-		LoginPage login = new LoginPage(driver);
-		Wait waitfs = new Wait();
-	
+		LoginPage login = new LoginPage(driver);	
 		login.loginapp(usrName,pass,accRights);
-		waitfs.WaitforSometime(2000);
-		
-		ScrShot capture = new ScrShot(driver);
-		capture.captureScreen();
+		captureScreen(driver);
 
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
-		waitfs.WaitforSometime(2000);
-		
-		MainPage mpg = new MainPage(driver);
 	
+		MainPage mpg = new MainPage(driver);
 		mpg.mainPageAfterLogin(mainMenu,subMenu);
-		waitfs.WaitforSometime(2000);
+		captureScreen(driver);	
 		
-		capture.captureScreen();	
-		
-		System.out.println("Test 5 Complete!!");
+		testEndMessage("Test 5");
 	}*/
+	
+	
+	@DataProvider (name = "personalData") 
+	public Object[][] passData (){
+		String xlPath = "D:\\Eclipse_Oxygen\\schooltest\\src\\test\\resources\\TeacherDetails.xlsx";
+		ExcelDataConfig excl = new ExcelDataConfig(xlPath);
+		int rows = excl.getRowCount(0);
+	
+		Object[][] data  = new Object [rows][8];
+		for (int i = 0; i< rows ;i++) {
+			
+			data [i][0] = excl.getData(0, i + 1, 0);
+			data [i][1] = excl.getData(0, i + 1, 1);
+			data [i][2] = excl.getData(0, i + 1, 2);
+			data [i][3] = excl.getData(0, i + 1, 3);
+			data [i][4] = excl.getData(0, i + 1, 4);
+			data [i][5] = excl.getData(0, i + 1, 5);
+			data [i][6] = excl.getData(0, i + 1, 6);
+			data [i][7] = excl.getData(0, i + 1, 7);
+			
+		}
+		return data;
+	}
+	
 	
 }

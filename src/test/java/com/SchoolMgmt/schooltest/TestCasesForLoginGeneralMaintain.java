@@ -1,10 +1,15 @@
 package com.SchoolMgmt.schooltest;
 
 import java.io.IOException;
+import java.util.List;
 
 import static com.SchoolMgmt.utils.Messages.*;
 import static com.SchoolMgmt.utils.ScrShot.*;
-
+import static com.SchoolMgmt.utils.Sleeper.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.SchoolMgmt.schoolPages.BranchPage;
@@ -12,6 +17,7 @@ import com.SchoolMgmt.schoolPages.LoginPage;
 import com.SchoolMgmt.schoolPages.MainPage;
 import com.SchoolMgmt.schoolPages.TeacherPage;
 import com.SchoolMgmt.utils.ExcelDataConfig;
+import com.SchoolMgmt.utils.Selectors;
 
 public class TestCasesForLoginGeneralMaintain extends Setup{
 
@@ -63,29 +69,38 @@ public class TestCasesForLoginGeneralMaintain extends Setup{
 	
 	}*/
 	
-	@Test(dataProvider = "personalData")
-	public void Test3(String code, String fName, String mName, String lName, String birthDate, String gender, String mStatus, String contactNo) throws IOException 
+	@Test
+	public void Test3() throws IOException 
 	{	
 		String subMenu   = "Teacher";
 		testStartMessage("Test 3");
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginapp(usrName,pass,accRights);
-		captureScreen(driver);
+		//captureScreen(driver);
 
 		BranchPage bpage = new BranchPage(driver);
 		bpage.Branch();
 		
 		MainPage mpg = new MainPage(driver);
 		mpg.mainPageAfterLogin(mainMenu,subMenu);
-		captureScreen(driver);
-		
+		//captureScreen(driver);
 		TeacherPage tPage = new TeacherPage(driver);
 		tPage.teacherElements();
-		tPage.addTeacherRecord(code,fName,mName,lName,birthDate,Boolean.parseBoolean(gender),Boolean.parseBoolean(mStatus),contactNo);
-		captureScreen(driver);
+	
+		Selectors findEle = new Selectors(driver);
+		Actions act = new Actions(driver);
+		act.click(findEle.targetCss(".multiselect.dropdown-toggle.btn.btn-white.btn-primary"));
+		List<WebElement> list = driver.findElements(By.cssSelector(".multiselect-container.dropdown-menu>ul > li> a"));
 		
-		testEndMessage("Test 3");
+		String [] opts = { "123", "ANDHERI BRANCH" };
+		for (String opt : opts) { // Excel.
+			WebElement option = list.stream().filter(e -> e.getText().equals(opt)).findFirst().get();
+			option.click ();
+			sleep ();
+		}
+		captureScreen(driver);
+		testEndMessage	("Test 3");
 	}
 	
 	/*@Test
@@ -128,28 +143,6 @@ public class TestCasesForLoginGeneralMaintain extends Setup{
 		testEndMessage("Test 5");
 	}*/
 	
-	
-	@DataProvider (name = "personalData") 
-	public Object[][] passData (){
-		String xlPath = "D:\\Eclipse_Oxygen\\schooltest\\src\\test\\resources\\TeacherDetails.xlsx";
-		ExcelDataConfig excl = new ExcelDataConfig(xlPath);
-		int rows = excl.getRowCount(0);
-	
-		Object[][] data  = new Object [rows][8];
-		for (int i = 0; i< rows ;i++) {
-			
-			data [i][0] = excl.getData(0, i + 1, 0);
-			data [i][1] = excl.getData(0, i + 1, 1);
-			data [i][2] = excl.getData(0, i + 1, 2);
-			data [i][3] = excl.getData(0, i + 1, 3);
-			data [i][4] = excl.getData(0, i + 1, 4);
-			data [i][5] = excl.getData(0, i + 1, 5);
-			data [i][6] = excl.getData(0, i + 1, 6);
-			data [i][7] = excl.getData(0, i + 1, 7);
-			
-		}
-		return data;
-	}
 	
 	
 }

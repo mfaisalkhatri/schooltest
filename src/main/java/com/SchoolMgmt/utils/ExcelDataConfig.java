@@ -33,7 +33,6 @@ public class ExcelDataConfig {
 		
 		sh1 = wb.getSheetAt(shNum);
 		String data = sh1.getRow(row).getCell(col).getStringCellValue();
-		
 		return data;
 		
 	}

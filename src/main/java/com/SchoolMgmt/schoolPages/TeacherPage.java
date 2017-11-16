@@ -3,12 +3,16 @@ package com.SchoolMgmt.schoolPages;
 import static com.SchoolMgmt.utils.Sleeper.sleep;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
+import org.testng.xml.ISuiteParser;
 
 import com.SchoolMgmt.utils.Selectors;
 import com.SchoolMgmt.utils.ExcelDataConfig;
@@ -44,8 +48,8 @@ public class TeacherPage {
 	
 	
 	public void addTeacherRecord (String code,String fName, String mName, String lName,String birthDate,boolean gender,boolean mStatus,
-								  String contactNo)/*, String emailId,String qualfc, String acdm, String panNo, String aadhrNo, String pfNo,
-								  String enrolNo, String enrolId, String joinDt, cnfrmDt, ) */
+								  String contactNo, String emailId,String qualfc, String acdm, String panNo, String aadhrNo, String pfNo,
+								  String enrolNo, String enrolId, String joinDt,String cnfrmDt, String branch, boolean hasLeft, boolean isPartTime)
 	{
 		
 		Selectors findEle = new Selectors(driver);
@@ -57,7 +61,7 @@ public class TeacherPage {
 		act.click(findEle.targetId("txtLname")).sendKeys(lName).perform();
 		act.click(findEle.targetId("dtBirthDate")).sendKeys(birthDate).perform();
 		
-		ArrayList<WebElement> gend = (ArrayList<WebElement>) driver.findElements(By.className("lbl")); 
+		List<WebElement> gend = driver.findElements(By.className("lbl")); 
 		
 		WebElement target = null;
 		if (gender == true) 
@@ -75,21 +79,23 @@ public class TeacherPage {
 		}	
 		act.click(target).perform();
 		
-		ArrayList<WebElement> mStat = (ArrayList<WebElement>) driver.findElements(By.className("lbl")); 
+		//List<WebElement> mStat = driver.findElements(By.cssSelector(".lbl[contains *= 'Married']"));
+		//WebElement mStat = driver.findElement(By.cssSelector(".lbl > input [id *= 'Married']"));
+		
 		WebElement targt = null;
-		if (!mStatus) 
+		if (mStatus==true) 
 		{
-			targt = mStat.get(0);
+			targt = gend.get(2);
+			
 		}
 		else
 		{
-			targt = mStat.get(1);
+			targt = gend.get(3);
 		}
-			
 		act.click(targt).perform(); 
 		act.click(findEle.targetId("txtContactno")).sendKeys(contactNo).perform();
 		
-		/*act.click(findEle.targetId("txtEmail")).sendKeys(emailId).perform();
+		act.click(findEle.targetId("txtEmail")).sendKeys(emailId).perform();
 		act.click(findEle.targetId("txtQualification")).sendKeys(qualfc).perform();
 		act.click(findEle.targetId("txtAchedamics")).sendKeys(acdm).perform();
 		act.click(findEle.targetId("txtPancard")).sendKeys(panNo).perform();
@@ -100,12 +106,23 @@ public class TeacherPage {
 		act.click(findEle.targetId("dtJoinDate")).sendKeys(joinDt).perform();
 		act.click(findEle.targetId("dtConfirmdate")).sendKeys(cnfrmDt).perform(); 
 		
-		act.click(findEle.targetId("chkHasleft")).sendKeys(contactNo).perform();
-		act.click(findEle.targetId("chkIsparttimefulltime")).sendKeys(contactNo).perform();
+		act.click(findEle.targetCss(".multiselect.dropdown-toggle.btn.btn-white.btn-primary"));
+		Select slct = new Select(findEle.targetCss(".multiselect-container.dropdown-menu"));
+		
+		List<String> list = new ArrayList<String>(Arrays.asList(branch.split(",")));
 
+		for (String check : list) {
+			slct.selectByVisibleText(check);
+		}
+
+		if(hasLeft == true) {
+			act.click(findEle.targetId("chkHasleft")).perform();	
+		}
 		
-		act.click(findEle.targetCss(".multiselect.dropdown-toggle.btn.btn-white.btn-primary")).sendKeys(contactNo).perform();*/
-		
+		if(isPartTime == true) {
+			act.click(findEle.targetId("chkIsparttimefulltime")).perform();	
+		}
+			
 	}
 	
 	

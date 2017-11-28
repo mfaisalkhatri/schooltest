@@ -90,8 +90,11 @@ public class TestCasesForLoginGeneralMaintain extends Setup{
 	
 		Selectors findEle = new Selectors(driver);
 		Actions act = new Actions(driver);
-		act.click(findEle.targetCss(".multiselect.dropdown-toggle.btn.btn-white.btn-primary"));
-		List<WebElement> list = driver.findElements(By.cssSelector(".multiselect-container.dropdown-menu>ul > li> a"));
+		act.click(findEle.targetId("txtAadharCard")).sendKeys("123456").perform();
+		WebElement bBtn = driver.findElement(By.cssSelector(".multiselect.dropdown-toggle.btn.btn-white.btn-primary"));
+		bBtn.click();
+		sleep();
+		List<WebElement> list = driver.findElements(By.cssSelector(".btn-group.open>ul>li>a"));
 		
 		String [] opts = { "123", "ANDHERI BRANCH" };
 		for (String opt : opts) { // Excel.

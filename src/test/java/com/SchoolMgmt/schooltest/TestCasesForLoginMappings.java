@@ -21,7 +21,7 @@ public class TestCasesForLoginMappings extends Setup{
 	public void Test1() throws InterruptedException, IOException 
 	{	
 		String subMenu  = "Student Class Map";
-		testStartMessage("Test 1");
+		testStartMessage("Mappings Test 1 for Student Class Map");
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginapp(usrName,pass,accRights);
@@ -33,14 +33,14 @@ public class TestCasesForLoginMappings extends Setup{
 		mpg.mainPageAfterLogin(mainMenu,subMenu);
 		captureScreen(driver);
 		
-		testEndMessage("Test 1");
+		testEndMessage("Mappings Test 1 for Student Class Map");
 	}
 	
 	@Test
 	public void Test2() throws InterruptedException, IOException 
 	{
 		String subMenu = "Teacher Subject Map";
-		testStartMessage("Test 2");
+		testStartMessage("Mappings Test 2 for Teacher subject Map");
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginapp(usrName,pass,accRights);
@@ -52,14 +52,14 @@ public class TestCasesForLoginMappings extends Setup{
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
 		captureScreen(driver);
 		
-		testEndMessage("Test 2");
+		testEndMessage("Mappings Test 2 for Teacher Subject Map");
 	}
 	
 	@Test
 	public void Test3() throws InterruptedException, IOException 
 	{	
 		String subMenu =  "Class Section Map";
-		testStartMessage("Test 3");
+		testStartMessage("Mappings Test 3 for Class Section Map");
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginapp(usrName, pass, accRights);
@@ -71,7 +71,7 @@ public class TestCasesForLoginMappings extends Setup{
 		mpg.mainPageAfterLogin(mainMenu,subMenu);
 		captureScreen(driver);
 		
-		testEndMessage("Test 3");
+		testEndMessage("Mappings Test 3 for Class Section Map");
 	}
 		
 	@Test
@@ -79,7 +79,7 @@ public class TestCasesForLoginMappings extends Setup{
 	{
 		
 		String subMenu = "Teacher Class Section Map";
-		testStartMessage("Test 4");
+		testStartMessage("Mappings Test 4 for Teacher Class Section Map");
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginapp(usrName,pass,accRights);
@@ -91,7 +91,7 @@ public class TestCasesForLoginMappings extends Setup{
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
 		captureScreen(driver);
 		
-		testEndMessage("Test 4");
+		testEndMessage("Mappings Test 4 for Teacher Class Section Map");
 	}
 		
 	@Test
@@ -99,7 +99,7 @@ public class TestCasesForLoginMappings extends Setup{
 	{
 		
 		String subMenu = "Teacher Subject Class Map";
-		testStartMessage("Test 5");
+		testStartMessage("Mappings Test 5 for Teacher Subject Class Map");
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginapp(usrName,pass,accRights);
@@ -111,14 +111,14 @@ public class TestCasesForLoginMappings extends Setup{
 		mpg.mainPageAfterLogin(mainMenu,subMenu);
 		captureScreen(driver);
 		
-		testEndMessage("Test 5");
+		testEndMessage("Mappings Test 5 for Teacher Subject Class Map");
 	}
 		
 	@Test
 	public void Test6() throws InterruptedException, IOException 
 	{
 		String subMenu = "Lecture Time Map";
-		testStartMessage("Test 6");
+		testStartMessage("Mappings Test 6 for Teacher Lecture Time Map");
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginapp(usrName, pass, accRights);
@@ -130,14 +130,14 @@ public class TestCasesForLoginMappings extends Setup{
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
 		captureScreen(driver);
 		
-		testEndMessage("Test 6");
+		testEndMessage("Mappings Test 6 for Teacher Lecture Time Map");
 	}
 		
 	@Test
 	public void Test7() throws InterruptedException, IOException 
 	{
 		String subMenu = "Time Table";
-		testStartMessage("Test 7");
+		testStartMessage("Mappings Test 7 for Teacher Time Table");
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginapp(usrName,pass,accRights);
@@ -149,7 +149,7 @@ public class TestCasesForLoginMappings extends Setup{
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
 		captureScreen(driver);
 		
-		testEndMessage("Test 7");
+		testEndMessage("Mappings Test 7 for Teacher Time Table");
 	}
 		
 	
@@ -157,7 +157,7 @@ public class TestCasesForLoginMappings extends Setup{
 	public void Test8() throws InterruptedException, IOException 
 	{	
 		String subMenu = "Subject Syllabus";
-		testStartMessage("Test 8");
+		testStartMessage("Mappings Test 8 for Teacher Subject Syllabus");
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginapp(usrName,pass,accRights);
@@ -169,7 +169,7 @@ public class TestCasesForLoginMappings extends Setup{
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
 		captureScreen(driver);
 		
-		testEndMessage("Test 8");
+		testEndMessage("Mappings Test 8 for Teacher Subject Syllabus");
 	}
 
 }

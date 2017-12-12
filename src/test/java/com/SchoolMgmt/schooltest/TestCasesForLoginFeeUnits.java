@@ -21,7 +21,7 @@ public class TestCasesForLoginFeeUnits extends Setup{
 	{
 
 		String subMenu  = "Fee Head";
-		testStartMessage("Test 1");
+		testStartMessage("Fee Units Test 1 for Fee Head");
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginapp(usrname,pass,accRights);
@@ -33,7 +33,7 @@ public class TestCasesForLoginFeeUnits extends Setup{
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
 		captureScreen(driver);
 		
-		testEndMessage("Test 1");
+		testEndMessage("Fee Units Test 1 for Fee Head");
 	}
 	
 
@@ -41,7 +41,7 @@ public class TestCasesForLoginFeeUnits extends Setup{
 	public void Test2() throws InterruptedException, IOException 
 	{
 		String subMenu  = "Fee Template";
-		testStartMessage("Test 2");
+		testStartMessage("Fee Units Test 2 for Fee Template");
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginapp(usrname,pass,accRights);
@@ -53,7 +53,7 @@ public class TestCasesForLoginFeeUnits extends Setup{
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
 		captureScreen(driver);
 		
-		testEndMessage("Test 2");
+		testEndMessage("Fee Units Test 2 for Fee Template");
 		
 	}
 	
@@ -63,7 +63,7 @@ public class TestCasesForLoginFeeUnits extends Setup{
 	
 		String subMenu  = "Fee Class Template";
 		
-		testStartMessage("Test 3");
+		testStartMessage("Fee Units Test 3 for Fee Class Template");
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginapp(usrname,pass,accRights);
@@ -75,7 +75,7 @@ public class TestCasesForLoginFeeUnits extends Setup{
 		mpg.mainPageAfterLogin(mainMenu, subMenu);
 		captureScreen(driver);
 		
-		testEndMessage("Test 3");
+		testEndMessage("Fee Units Test 3 for Fee Class Template");
 		
 	}
 
@@ -85,7 +85,7 @@ public class TestCasesForLoginFeeUnits extends Setup{
 	
 		String subMenu   = "Fee Collection";
 		
-		testStartMessage("Test 4");
+		testStartMessage("Fee Units Test 4 for Fee Collection");
 		
 		LoginPage login = new LoginPage(driver);
 		login.loginapp(usrname,pass,accRights);
@@ -98,7 +98,7 @@ public class TestCasesForLoginFeeUnits extends Setup{
 	
 		captureScreen(driver);
 		
-		testEndMessage("Test 4");
+		testEndMessage("Fee Units Test 4 for Fee Collection");
 		
 	}	
 	
